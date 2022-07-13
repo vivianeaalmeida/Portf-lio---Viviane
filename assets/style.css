@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+/*Formatar um único H1 para tudo - uma ideia */
+
+:root{
+    --vinho: #9E5252;
+    --rosaclaro: #FFB8B8;
+    --rosamedio: #EB9292;
+    --verdeescuro: #429E5C;
+    --verdeclaro: #81EBAB;
+    --vinho2: rgba(105, 30, 30, 0.829);
+    --branquinho: #f0ebeb;
+
+
+}
+
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+    cursor: default;
+
+}
+
+*::selection{
+    background: var(--verdeclaro);
+    color: rgb(49, 36, 36);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body{
+    background: rgb(151,242,194);
+    background: linear-gradient(0deg, rgba(151,242,194,0.8827906162464986) 8%, rgba(242,147,174,1) 100%);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+header{
+   position: fixed;
+   top: 0; left: 0; /*para mudar de lado, está obvio*/
+   height: 100%;
+   width: 40rem;
+   background: rgb(158,82,82);
+   background: linear-gradient(circle, rgba(158,82,82,1) 0%, rgba(222,121,135,1) 73%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+   text-align: center;
+}
+
+
+header .logo img{
+    height: 17rem;
+    width: 17rem;
+    object-fit: cover;
+    border: solid .7rem;
+    border-color: var(--rosamedio);
+    margin-bottom: 1rem;
+    padding: auto; /*aqui diminui a imagem*/
+    border-radius: 47%;
+    
+    
+}
+
+header .logo .titulo{
+   font-size: 3.5rem; 
+   color: rgb(49, 36, 36);
+}
+
+header .logo .titulo2{
+    font-size: 2rem; 
+    color: rgb(49, 36, 36);
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: .1rem;
+    margin: 1.5rem 0;
+    background: var(--rosaclaro);
+    color: rgb(49, 36, 36);
+    font-size: 2.3rem;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+header .navbar ul li a:hover{
+    background: rgb(200,224,88);
+    background: radial-gradient(circle, rgba(200,224,88,1) 15%, rgba(50,238,163,1) 65%);
+    color: #4e3131;
+    transition: ease-in-out;
+    width: 101%;
+}
+
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: var(--vinho);
+    color: rgb(49, 36, 36);
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+
+
+/*Home*/
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: rgba(105, 30, 30, 0.829);
+}
+
+.home h1{
+    font-size: 5rem;
+    color: var(--branquinho);
+    animation: go-back 1s infinite alternate;
+}
+
+
+.home p{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .5rem 3rem;
+    background: var(--vinho);
+    color: var(--branquinho);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn:hover{
+    background: rgb(200,224,88);
+    background: radial-gradient(circle, rgba(200,224,88,1) 15%, rgba(50,238,163,1) 65%);
+    color:#4e3131;
+    width: 30%;
+}
+
+/*Sobre como Ajudar hehe*/
+.about{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 2rem;
+    border-bottom: .1rem solid #429E5C;
+    color: var(--vinho);
+}
+
+
+/*ver*/
+
+details{
+    background: fixed;
+    background-color: #c08f8f;
+    
+}
+
+.collapse{
+    border: solid 3px var(--vinho);
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90rem;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.collapse:hover{
+    background: rgb(158,82,82);
+    background: linear-gradient(90deg, rgba(158,82,82,1) 0%, rgba(163,232,194,0.4962359943977591) 73%);
+    transition: 0.5s all;
+
+}
+
+summary{
+    padding: 2rem;
+    margin: 2rem;
+    text-align: start;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+summary{
+    list-style-type: '▼     '; /*serasse é uma gambi*/
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+details[open] summary{
+    list-style-type: '▲    ';
+    cursor: pointer;
+    
+    
+
+    
+}
+
+.summary{
+    font-size: 1.5rem;
+    padding: 0 2rem 2rem 2rem;
+    text-align: justify;
+    
+}
+
+
+
+.sobre{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.btn2{
+    padding: .5rem 3rem;
+    background: var(--vinho);
+    color: var(--branquinho);
+    cursor: pointer;
+    margin-top: 8rem;
+    font-size: 2.5rem;
+    border-radius: 5rem;
+    margin-left: 40%;
+    text-transform: none;
+    margin-bottom: 10rem;
+
+}
+
+.btn2:hover{
+    background: rgb(200,224,88);
+    background: radial-gradient(circle, rgba(200,224,88,1) 15%, rgba(50,238,163,1) 65%);
+    color: #4e3131;
+    width: 20%;
+
+}
+
+
+/*Profissional*/
+
+.profissional h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #9E5252;
+    font-size: 4rem;
+    border-bottom: .1rem solid #429E5C;
+    padding: 2rem;
+    margin: 0 20rem;
+}
+
+.eng{
+   display: flex;
+   flex-direction: row;
+   margin: 2rem 9rem 2rem 9rem;
+   padding: 6rem;
+   
+}
+
+.box2{
+    background: rgb(200,224,88);
+    background: radial-gradient(circle, rgba(200,224,88,0.76234243697479) 15%, rgba(50,238,65,0.7707457983193278) 65%);
+    border-radius: 10%;
+    width: fit-content;
+}
+
+.box2 p{
+    padding: 2rem;
+}
+
+.box3{
+    background: rgb(224,88,132);
+    background: radial-gradient(circle, rgba(224,88,132,0.76234243697479) 15%, rgba(179,98,154,0.7707457983193278) 65%);
+    border-radius: 10%;
+    width: fit-content;
+}
+
+.box3 p{
+    padding: 2rem;
+}
+
+
+.container-qua img{
+    width: 20rem;   
+    filter: sepia(95%);
+    margin-left: 16rem;
+    
+}
+
+.container-qua img:hover{
+    filter: none;
+    animation: brb 2s infinite;
+    
+}
+
+.container-qua h3, h4{
+    margin-left: 12rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-top: 3rem;
+    align-content: center;
+}
+
+.container-qua p{
+    text-align: justify;
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-right: 6.5rem;
+}
+
+/*Habilidades*/
+
+.row-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-left: 25rem;
+    margin-right: 30rem;
+    padding-bottom: 10rem;
+    
+}
+
+
+
+.habilidades h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: #9E5252;
+    font-size: 4rem;
+    border-bottom: #429E5C .1rem solid;
+    margin: 0 20rem;
+    padding: 2rem;
+}
+
+.habilidades img{
+    width: 15rem;
+    margin: 5rem;
+    padding: 5rem;
+    background: #9E5252;
+    border-radius: 25%;
+    
+}
+
+.habilidades img:hover{
+    background: var(--rosamedio);
+    transition: all 0.6s;
+    width: 17rem;
+}
+
+.qualquer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: .1rem;    
+}
+
+
+.row-2 p{
+    position: relative;
+    font-size: 2rem;
+}
+
+.col-sm-3 p{
+    margin-bottom: 1rem;
+}
+
+.stars{
+    position: absolute;
+    margin-left: 6rem;
+    font-size: 2rem;
+    color: antiquewhite;
+
+}
+
+.checked{
+    color: var(--vinho);
+}
+
+/*Contato*/
+
+form{
+    padding-top: 2rem;
+    margin-top: 4rem;
+    background: rgb(196,120,120);
+    background: linear-gradient(90deg, rgba(196,120,120,1) 0%, rgba(255,145,195,1) 35%, rgba(129,235,171,1) 100%);
+    
+    
+    
+}
+
+form h2{
+    margin: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-size: 3.5rem;
+    overflow: hidden;
+    
+}
+
+input, textarea{
+    display: flex;
+    flex-direction: row;
+    width: 40rem;
+    padding: 1rem;
+    color: var(--vinho);
+    margin: auto;
+    margin-bottom: 3rem;
+    border: .1rem solid;
+    border-radius: 1em;
+    cursor: text;
+}
+
+.textbox{
+    padding: 5rem;
+    text-align: center;
+}
+
+input:hover, textarea:hover{
+    background-color: #b0ebc7;
+}
+
+.enviar{
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1em;
+    cursor: pointer;
+    background: rgb(200,224,88);
+    background: radial-gradient(circle, rgba(200,224,88,1) 15%, rgba(50,238,163,1) 65%);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*keyframes*/
+/*transição do INHO*/
+@keyframes go-back {
+    from {
+      transform: translateX(100px);
+      color: #81EBAB;
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+@keyframes brb{
+    0%{
+        transform: translateX(1rem);
+    }
+
+    50%{
+        transform: translateX(2rem);
+    }
+
+    100%{
+        transform: translateX(1rem);
+    }
+}
+
+@keyframes food{
+    0%{
+        transform: none;
+        
+        
+        
+    }
+
+    100%{
+        transform: scale(1.0);
+        
+    }
+}
+
+
+
+/*Media Queries*/
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width: 991px){
+    header{
+        left:-120%;
+    }
+
+#menu{
+    display: block;
+}
+
+header.toggle{
+    left: 0%;
+}
+
+body{
+    padding: 0;
+}
+
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+
+@media(max-width:400px){
+    header{
+        width: 100vw;
+    }
+}
